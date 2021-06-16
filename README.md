@@ -1,1 +1,1 @@
-# Dynamic-Time-Warping-and-Hidden-Markov-Model
+# Dynamic Time Warping and Hidden Markov Model
