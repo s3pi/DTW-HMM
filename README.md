@@ -7,11 +7,11 @@ Some real-life cases include:
 
 The minimum cost path in these cases comprises of the optimal local, pair wise correspondence between the frames/elements of the two sequences, which are of different lengths. This requires the alignment or warping of the elements of the test string to the elements of the reference string, corresponding to the best matching score.
 
-##### Dynamic Time Warping
+#### Dynamic Time Warping
 Dynamic time warping finds an optimal alignment between two sequences of feature vectors of varying length. For instance, matching of utterances (chunks of speech) from a known vocabulary involves converting the raw speech into a sequence of feature vectors and comparing them with the sequences of feature vectors of available templates. However, since the speaking rates in the input speech can be different from the reference / template, direct feature-by-feature comparison is not possible due to unequal length of sequences. Even if the lengths of the sequences are normalized, it cannot account for the varying speech rates within the utterances. Thus, it becomes necessary to locally or dynamically adjust the lengths of various segments (stretching or shrinking) within the input and template speech.
 Use of DTW for varying length sequence matching comes with some limitations as well, which are discussed below:
 1) DTW cannot capture the absence of events which are missing in the test sequences and are present in the reference sequences.
 2) One single reference cannot capture all the variability in a test sequence and thus, more reference sequences are required.
 
-##### Hidden Markov Model (HMM)
+#### Hidden Markov Model (HMM)
 Hidden Markov Model is a popular tool in many recognition tasks including speech, gesture, action etc. owing to its powerful representation of many real-world signal models. One of the most powerful properties of hidden Markov models is their ability to exhibit some degree of invariance to local warping (compression and stretching) of the time axis. In the speech recognition context, warping of the time axis is associated with natural variations in the speed of speech, and again the hidden Markov model can accommodate such a distortion and not penalize it too heavily. The training of an HMM is done using Baum Welch algorithm.
